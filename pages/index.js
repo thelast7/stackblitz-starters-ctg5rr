@@ -1,3 +1,5 @@
+import { BsFillEyeSlashFill } from 'react-icons/bs';
+
 export default function Home() {
   return (
     <div className="flex max-w-screen-xl mx-auto">
@@ -9,22 +11,25 @@ export default function Home() {
         />
       </div>
       <div className="lg:w-1/2 p-8">
-        <h1 className="text-3xl font-bold mb-6 text-left">Hello</h1>
+        <h1 className="text-3xl font-bold mb-2 text-left">Hello</h1>
+        <p className="text-lg mb-12">Enter your email and password to login.</p>
         <form onSubmit={null}>
+          <span className="text-lg">Email</span>
           <input
             type="text"
-            placeholder="Username"
+            placeholder="email"
             // value={auth.username}
             // onChange={(e) => dispatch(setUsername(e.target.value))}
-            className="block w-full px-4 py-2 mb-4 border rounded"
+            className="block w-full text-lg px-4 py-2 mb-4 border rounded-lg"
           />
+          <span className="text-lg">Password</span>
           <div className="relative mb-4">
             <input
               // type={auth.showPassword ? 'text' : 'password'}
               placeholder="Password"
               // value={auth.password}
               // onChange={(e) => dispatch(setPassword(e.target.value))}
-              className="block w-full px-4 py-2 border rounded"
+              className="block w-full text-lg px-4 py-2 border rounded-lg"
             />
             <button
               type="button"
@@ -32,7 +37,7 @@ export default function Home() {
               className="absolute top-1/2 right-4 transform -translate-y-1/2"
             >
               {/* {auth.showPassword ? 'Hide' : 'Show'} */}
-              Show
+              <BsFillEyeSlashFill />
             </button>
           </div>
           <div className="flex items-center mb-4">
